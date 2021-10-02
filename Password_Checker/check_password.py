@@ -51,7 +51,7 @@ def get_passwords_from_file(file_input):
 def main(file):
 
 	if os.path.exists(file) and os.path.splitext(file)[1] == ".txt":
-		passwords = get_passwords_from_file(file)		
+		passwords = get_passwords_from_file(file)
 	else:
 		print("\nPlease enter an existing .txt file\n")
 		sys.exit()
@@ -63,8 +63,7 @@ def main(file):
 			print(f"\n\n{password} was found {count} times... you should probably change your password\n")
 		else:
 			print(f"\n\n{password} was NOT found. Carry on!\n")
-		
+
 
 if __name__ == '__main__':
-	# main(sys.exit(sys.argv[1:]))
 	main(sys.argv[1])
